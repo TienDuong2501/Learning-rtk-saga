@@ -9,7 +9,8 @@ export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 
-export function InputField({ name, control, label, ...inputProps }: InputFieldProps) {
+export function InputField({ name, control, label, required, ...inputProps }: InputFieldProps) {
+  console.log('ddddddddddddd', inputProps)
   const {
     field: { value, onChange, onBlur, ref },
     fieldState: { invalid, error },
@@ -31,6 +32,7 @@ export function InputField({ name, control, label, ...inputProps }: InputFieldPr
       inputRef={ref}
       error={invalid}
       helperText={error?.message}
+      required={required}
       inputProps={inputProps}
     />
   );

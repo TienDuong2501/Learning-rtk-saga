@@ -2,6 +2,7 @@ import { ListParams, ListResponse, Student } from 'models';
 import axiosClient from './axiosClient';
 
 const studentApi = {
+  // dung kieu du lieu cho parem chuyen vao va response tra ve
   getAll(params: ListParams): Promise<ListResponse<Student>> {
     const url = '/students';
     return axiosClient.get(url, { params });

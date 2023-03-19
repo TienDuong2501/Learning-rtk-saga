@@ -1,3 +1,4 @@
+// khoi tao kieu du lieu
 export interface Student {
   id?: string;
   name: string;
